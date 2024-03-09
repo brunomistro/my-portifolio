@@ -1,20 +1,15 @@
 import type { Metadata } from "next"
 import { Source_Code_Pro } from "next/font/google"
+import { twSum } from "@/utils/utils"
 import Navbar from "@/components/Navbar"
-import "./globals.css"
 import Footer from "@/components/Footer"
+import "./globals.css"
 
 const sourceCodePro = Source_Code_Pro({
   subsets: ["latin"],
   weight: ["200", "400", "800"],
   style: ["normal", "italic"],
 })
-
-// text slate-50
-// bg-color-gray-600
-// sky-400
-// sky-800
-// yellow-400
 
 export const metadata: Metadata = {
   title: "Bruno M - Full-stack Developer",
@@ -30,7 +25,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full">
       <body
-        className={`${sourceCodePro.className} flex h-full flex-col bg-gray-800 text-slate-50`}
+        className={twSum(
+          sourceCodePro,
+          "flex h-full flex-col bg-gray-800 text-slate-50",
+        )}
       >
         <Navbar />
         <main className="flex-auto">{children}</main>
