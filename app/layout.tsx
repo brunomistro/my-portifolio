@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
+// edit font to source code pro
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -16,7 +17,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className} bg-gray-800 text-slate-50`}>
+        {/* navbar */}
+        {/* content */}
+        <main>{children}</main>
+        {/* footer */}
+      </body>
     </html>
   );
 }
