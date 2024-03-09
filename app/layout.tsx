@@ -26,7 +26,7 @@ export default function RootLayout({
     <html lang="en" className="h-full">
       <body
         className={twSum(
-          sourceCodePro,
+          sourceCodePro.className,
           "flex h-full flex-col bg-gray-800 text-slate-50",
         )}
       >
